@@ -1,0 +1,10 @@
+tensorflow
+pandas
+matplotlib
+numpy
+ipywidgets
+ipython
+scipy
+opencv-python
+mediapipe
+split_folders
