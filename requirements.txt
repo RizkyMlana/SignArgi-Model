@@ -8,3 +8,4 @@ scipy
 opencv-python
 mediapipe
 split_folders
+scikit-learn
