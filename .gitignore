@@ -1,2 +1,6 @@
 .venv
 /dataset
+/save_model
+/tflite_model
+/best_model
+/variables
