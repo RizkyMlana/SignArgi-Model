@@ -5,7 +5,8 @@ import mediapipe as mp
 
 
 # Load TFLite model
-interpreter = tf.lite.Interpreter(model_path="./tflite_model/Model_SignLang.tflite")
+interpreter = tf.lite.Interpreter(model_path="./tflite_model/model_signlang.tflite")
+# interpreter = tf.lite.Interpreter(model_path="model.tflite")
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
@@ -16,7 +17,22 @@ height = input_shape[1]
 width = input_shape[2]
 
 # Label list
-labels = ['A', 'B', 
+# labels = ['A', 'B', 
+#           'C', 'D', 
+#           'E', 'F', 
+#           'G', 'H', 
+#           'I', 'J', 
+#           'K', 'L', 
+#           'M', 'N', 
+#           'O', 'P',
+#           'Q', 'R',
+#           'S', 'T',
+#           'U', 'V',
+#           'W', 'X',
+#           'Y', 'Z',
+#           'delete', 'nothing', 'space']
+
+labels = ['A', 'B', 'blank', 
           'C', 'D', 
           'E', 'F', 
           'G', 'H', 
@@ -28,9 +44,7 @@ labels = ['A', 'B',
           'S', 'T',
           'U', 'V',
           'W', 'X',
-          'Y', 'Z',
-          'delete', 'nothing', 'space']
-
+          'Y', 'Z',]
 # MediaPipe hands setup
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
